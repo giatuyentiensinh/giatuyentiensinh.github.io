@@ -1,6 +1,6 @@
 webpackJsonp([0,4],{
 
-/***/ 413:
+/***/ 428:
 /***/ function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,21 +9,21 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 413;
+webpackEmptyContext.id = 428;
 
 
 /***/ },
 
-/***/ 414:
+/***/ 429:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(549);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(565);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__polyfills_ts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(506);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(522);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(548);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__(539);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(564);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__(555);
 
 
 
@@ -37,7 +37,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ },
 
-/***/ 538:
+/***/ 554:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55,14 +55,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var AppComponent = (function () {
     function AppComponent() {
+        this.sources = [
+            {
+                src: "/assets/songs/NessunDorma.m4a",
+                type: "audio/mp3"
+            }
+        ];
     }
+    AppComponent.prototype.onPlayerReady = function (api) {
+        this.api = api;
+        this.api.getDefaultMedia().subscriptions.loadedMetadata.subscribe(this.playVideo.bind(this));
+    };
+    AppComponent.prototype.playVideo = function () {
+        this.api.play();
+    };
     AppComponent.prototype.ngOnInit = function () {
     };
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(735),
-            styles: [__webpack_require__(726)]
+            template: __webpack_require__(752),
+            styles: [__webpack_require__(743)]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -72,32 +85,40 @@ var AppComponent = (function () {
 
 /***/ },
 
-/***/ 539:
+/***/ 555:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(497);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(526);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_materialize__ = __webpack_require__(551);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(513);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(542);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_materialize__ = __webpack_require__(567);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_materialize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2__ = __webpack_require__(349);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_translate__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angular2_masonry__ = __webpack_require__(536);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_pdf_viewer__ = __webpack_require__(719);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_translate__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angular2_masonry__ = __webpack_require__(552);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_pdf_viewer__ = __webpack_require__(736);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_pdf_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_ng2_pdf_viewer__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__(538);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__home_home_component__ = __webpack_require__(543);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__layout_layout_component__ = __webpack_require__(544);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__skill_skill_component__ = __webpack_require__(547);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__project_project_component__ = __webpack_require__(546);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__friend_friend_component__ = __webpack_require__(542);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__cv_cv_component__ = __webpack_require__(541);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__contact_contact_component__ = __webpack_require__(540);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pdf_pdf_component__ = __webpack_require__(545);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_videogular2_core__ = __webpack_require__(816);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_videogular2_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_videogular2_core__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_videogular2_controls__ = __webpack_require__(815);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_videogular2_controls___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_videogular2_controls__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_videogular2_overlay_play__ = __webpack_require__(817);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_videogular2_overlay_play___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_videogular2_overlay_play__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_videogular2_buffering__ = __webpack_require__(814);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_videogular2_buffering___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_videogular2_buffering__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(554);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__home_home_component__ = __webpack_require__(559);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__layout_layout_component__ = __webpack_require__(560);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__skill_skill_component__ = __webpack_require__(563);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__project_project_component__ = __webpack_require__(562);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__friend_friend_component__ = __webpack_require__(558);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__cv_cv_component__ = __webpack_require__(557);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__contact_contact_component__ = __webpack_require__(556);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pdf_pdf_component__ = __webpack_require__(561);
 /* unused harmony export firebaseConfig */
 /* unused harmony export createTranslateLoader */
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
@@ -130,19 +151,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
 var routes = [
     { path: '', redirectTo: '/cv', pathMatch: 'full' },
     // { path: '**', redirectTo: '/cv', pathMatch: 'full' },
-    { path: 'cv', component: __WEBPACK_IMPORTED_MODULE_17__cv_cv_component__["a" /* CvComponent */] },
+    { path: 'cv', component: __WEBPACK_IMPORTED_MODULE_21__cv_cv_component__["a" /* CvComponent */] },
     {
-        path: 'layout', component: __WEBPACK_IMPORTED_MODULE_13__layout_layout_component__["a" /* LayoutComponent */], children: [
-            { path: 'home', component: __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */] },
-            { path: 'skill', component: __WEBPACK_IMPORTED_MODULE_14__skill_skill_component__["a" /* SkillComponent */] },
-            { path: 'project', component: __WEBPACK_IMPORTED_MODULE_15__project_project_component__["a" /* ProjectComponent */] },
-            { path: 'friend', component: __WEBPACK_IMPORTED_MODULE_16__friend_friend_component__["a" /* FriendComponent */] }
+        path: 'layout', component: __WEBPACK_IMPORTED_MODULE_17__layout_layout_component__["a" /* LayoutComponent */], children: [
+            { path: 'home', component: __WEBPACK_IMPORTED_MODULE_16__home_home_component__["a" /* HomeComponent */] },
+            { path: 'skill', component: __WEBPACK_IMPORTED_MODULE_18__skill_skill_component__["a" /* SkillComponent */] },
+            { path: 'project', component: __WEBPACK_IMPORTED_MODULE_19__project_project_component__["a" /* ProjectComponent */] },
+            { path: 'friend', component: __WEBPACK_IMPORTED_MODULE_20__friend_friend_component__["a" /* FriendComponent */] }
         ]
     },
-    { path: 'pdf', component: __WEBPACK_IMPORTED_MODULE_19__pdf_pdf_component__["a" /* PdfComponent */] }
+    { path: 'pdf', component: __WEBPACK_IMPORTED_MODULE_23__pdf_pdf_component__["a" /* PdfComponent */] }
 ];
 var firebaseConfig = {
     apiKey: 'AIzaSyAYJ1r9qkbwCwXsPVmdU24HXJPu8YujGtM',
@@ -160,15 +185,15 @@ var AppModule = (function () {
     AppModule = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__layout_layout_component__["a" /* LayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__skill_skill_component__["a" /* SkillComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__project_project_component__["a" /* ProjectComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__friend_friend_component__["a" /* FriendComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__cv_cv_component__["a" /* CvComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__contact_contact_component__["a" /* ContactComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__pdf_pdf_component__["a" /* PdfComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__layout_layout_component__["a" /* LayoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__skill_skill_component__["a" /* SkillComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__project_project_component__["a" /* ProjectComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__friend_friend_component__["a" /* FriendComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__cv_cv_component__["a" /* CvComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__contact_contact_component__["a" /* ContactComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__pdf_pdf_component__["a" /* PdfComponent */],
                 __WEBPACK_IMPORTED_MODULE_10_ng2_pdf_viewer__["PdfViewerComponent"]
             ],
             imports: [
@@ -177,6 +202,10 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_6_angular2_materialize__["MaterializeModule"],
                 __WEBPACK_IMPORTED_MODULE_9_angular2_masonry__["a" /* MasonryModule */],
+                __WEBPACK_IMPORTED_MODULE_11_videogular2_core__["VgCoreModule"],
+                __WEBPACK_IMPORTED_MODULE_12_videogular2_controls__["VgControlsModule"],
+                __WEBPACK_IMPORTED_MODULE_13_videogular2_overlay_play__["VgOverlayPlayModule"],
+                __WEBPACK_IMPORTED_MODULE_14_videogular2_buffering__["VgBufferingModule"],
                 __WEBPACK_IMPORTED_MODULE_8_ng2_translate__["c" /* TranslateModule */].forRoot({
                     provide: __WEBPACK_IMPORTED_MODULE_8_ng2_translate__["d" /* TranslateLoader */],
                     useFactory: (createTranslateLoader),
@@ -186,7 +215,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forRoot(routes)
             ],
             providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4__angular_common__["LocationStrategy"], useClass: __WEBPACK_IMPORTED_MODULE_4__angular_common__["HashLocationStrategy"] }],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */]]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
@@ -196,12 +225,12 @@ var AppModule = (function () {
 
 /***/ },
 
-/***/ 540:
+/***/ 556:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2__ = __webpack_require__(360);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ContactComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -237,8 +266,8 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-contact',
-            template: __webpack_require__(736),
-            styles: [__webpack_require__(727)]
+            template: __webpack_require__(753),
+            styles: [__webpack_require__(744)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2__["a" /* AngularFire */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_angularfire2__["a" /* AngularFire */]) === 'function' && _a) || Object])
     ], ContactComponent);
@@ -249,7 +278,7 @@ var ContactComponent = (function () {
 
 /***/ },
 
-/***/ 541:
+/***/ 557:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -273,9 +302,10 @@ var CvComponent = (function () {
     CvComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-cv',
-            template: __webpack_require__(737),
-            styles: [__webpack_require__(728)]
-        }), 
+            template: __webpack_require__(754),
+            styles: [__webpack_require__(745)]
+        }),
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
         __metadata('design:paramtypes', [])
     ], CvComponent);
     return CvComponent;
@@ -284,12 +314,12 @@ var CvComponent = (function () {
 
 /***/ },
 
-/***/ 542:
+/***/ 558:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_translate__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_translate__ = __webpack_require__(256);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return FriendComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -313,8 +343,8 @@ var FriendComponent = (function () {
     FriendComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-friend',
-            template: __webpack_require__(738),
-            styles: [__webpack_require__(729)]
+            template: __webpack_require__(755),
+            styles: [__webpack_require__(746)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ng2_translate__["a" /* TranslateService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ng2_translate__["a" /* TranslateService */]) === 'function' && _a) || Object])
     ], FriendComponent);
@@ -325,7 +355,7 @@ var FriendComponent = (function () {
 
 /***/ },
 
-/***/ 543:
+/***/ 559:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -347,8 +377,8 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home',
-            template: __webpack_require__(739),
-            styles: [__webpack_require__(730)]
+            template: __webpack_require__(756),
+            styles: [__webpack_require__(747)]
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
@@ -358,12 +388,12 @@ var HomeComponent = (function () {
 
 /***/ },
 
-/***/ 544:
+/***/ 560:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_translate__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_translate__ = __webpack_require__(256);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LayoutComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -387,8 +417,8 @@ var LayoutComponent = (function () {
     LayoutComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-layout',
-            template: __webpack_require__(740),
-            styles: [__webpack_require__(731)]
+            template: __webpack_require__(757),
+            styles: [__webpack_require__(748)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ng2_translate__["a" /* TranslateService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ng2_translate__["a" /* TranslateService */]) === 'function' && _a) || Object])
     ], LayoutComponent);
@@ -399,7 +429,7 @@ var LayoutComponent = (function () {
 
 /***/ },
 
-/***/ 545:
+/***/ 561:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -423,8 +453,8 @@ var PdfComponent = (function () {
     PdfComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-pdf',
-            template: __webpack_require__(741),
-            styles: [__webpack_require__(732)]
+            template: __webpack_require__(758),
+            styles: [__webpack_require__(749)]
         }), 
         __metadata('design:paramtypes', [])
     ], PdfComponent);
@@ -434,7 +464,7 @@ var PdfComponent = (function () {
 
 /***/ },
 
-/***/ 546:
+/***/ 562:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -456,8 +486,8 @@ var ProjectComponent = (function () {
     ProjectComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-project',
-            template: __webpack_require__(742),
-            styles: [__webpack_require__(733)]
+            template: __webpack_require__(759),
+            styles: [__webpack_require__(750)]
         }), 
         __metadata('design:paramtypes', [])
     ], ProjectComponent);
@@ -467,7 +497,7 @@ var ProjectComponent = (function () {
 
 /***/ },
 
-/***/ 547:
+/***/ 563:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -513,8 +543,8 @@ var SkillComponent = (function () {
     SkillComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-skill',
-            template: __webpack_require__(743),
-            styles: [__webpack_require__(734)]
+            template: __webpack_require__(760),
+            styles: [__webpack_require__(751)]
         }), 
         __metadata('design:paramtypes', [])
     ], SkillComponent);
@@ -524,7 +554,7 @@ var SkillComponent = (function () {
 
 /***/ },
 
-/***/ 548:
+/***/ 564:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -540,41 +570,41 @@ var environment = {
 
 /***/ },
 
-/***/ 549:
+/***/ 565:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(575);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(591);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(568);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(584);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(564);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(580);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(586);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(569);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(585);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(567);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(583);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(566);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(582);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(590);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(563);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(579);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(562);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(578);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(572);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(588);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(565);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(581);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(573);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(589);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(587);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(576);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(592);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(836);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
 
 
@@ -596,139 +626,139 @@ var environment = {
 
 /***/ },
 
-/***/ 726:
+/***/ 743:
 /***/ function(module, exports) {
 
 module.exports = ""
 
 /***/ },
 
-/***/ 727:
+/***/ 744:
 /***/ function(module, exports) {
 
 module.exports = ""
 
 /***/ },
 
-/***/ 728:
+/***/ 745:
 /***/ function(module, exports) {
 
 module.exports = "nav .brand-logo {\n    color: #212121;\n}\n\nnav ul a {\n    color: #212121;\n    font-weight: bold;\n}\n\n.active {\n    background-color: #E5E5E5;\n}"
 
 /***/ },
 
-/***/ 729:
+/***/ 746:
 /***/ function(module, exports) {
 
 module.exports = ".point {\n\tcursor: pointer;\n}"
 
 /***/ },
 
-/***/ 730:
+/***/ 747:
 /***/ function(module, exports) {
 
 module.exports = ".image {\n  position: relative;\n  width: 100%;\n  height: 450px;\n}\n\n.text-img {\n  position: absolute;\n  width: 100%;\n  z-index: 1;\n}"
 
 /***/ },
 
-/***/ 731:
+/***/ 748:
 /***/ function(module, exports) {
 
 module.exports = "h5 {\n  margin-bottom: 0px;\n}\n"
 
 /***/ },
 
-/***/ 732:
+/***/ 749:
 /***/ function(module, exports) {
 
 module.exports = ""
 
 /***/ },
 
-/***/ 733:
+/***/ 750:
 /***/ function(module, exports) {
 
 module.exports = ""
 
 /***/ },
 
-/***/ 734:
+/***/ 751:
 /***/ function(module, exports) {
 
 module.exports = ".brick {\n    width: 200px;\n}"
 
 /***/ },
 
-/***/ 735:
+/***/ 752:
 /***/ function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\n<vg-player style=\"height: 0px;\" (onPlayerReady)=\"onPlayerReady($event)\">\n    <vg-controls>\n        <vg-play-pause></vg-play-pause>\n        <vg-playback-button></vg-playback-button>\n        <vg-time-display vgProperty=\"current\" vgFormat=\"mm:ss\"></vg-time-display>\n        <vg-scrub-bar>\n            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n        <vg-time-display vgProperty=\"left\" vgFormat=\"mm:ss\"></vg-time-display>\n        <vg-time-display vgProperty=\"total\" vgFormat=\"mm:ss\"></vg-time-display>\n        <vg-mute></vg-mute>\n        <vg-fullscreen></vg-fullscreen>\n    </vg-controls>\n    <audio #media [vgMedia]=\"media\" id=\"myAudio\" preload=\"auto\">\n        <source *ngFor=\"let audio of sources\" [src]=\"audio.src\" [type]=\"audio.type\">\n    </audio>\n</vg-player>"
 
 /***/ },
 
-/***/ 736:
+/***/ 753:
 /***/ function(module, exports) {
 
 module.exports = "<div class=\"row\">\n    <form class=\"col s12\" (ngSubmit)=\"onSubmit()\" #form=\"ngForm\">\n        <!-- <legend class=\"blue-text text-darken-4\">\n            <h4>Give me a message</h4>\n        </legend> -->\n        <div class=\"row\">\n            <div class=\"input-field col s6 light-blue-text\">\n                <input id=\"name\" type=\"text\" class=\"validate\" name=\"name\" [(ngModel)]=\"name\" #nameV=\"ngModel\" required />\n                <label for=\"name\">Name</label>\n                <div [hidden]=\"nameV.valid || nameV.pristine\" class=\"red-text\">\n                    Tên không được bỏ trống\n                </div>\n            </div>\n            <div class=\"input-field col s6 light-blue-text\">\n                <input id=\"email\" type=\"email\" class=\"validate\" name=\"email\" [(ngModel)]=\"email\" #emailV=\"ngModel\" required />\n                <label for=\"email\">Email</label>\n                <div [hidden]=\"emailV.valid || emailV.pristine\" class=\"red-text\">\n                    Email không được bỏ trống\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"input-field col s12 light-blue-text\">\n                <textarea id=\"message\" class=\"materialize-textarea\" name=\"message\" [(ngModel)]=\"message\" #messageV=\"ngModel\" required></textarea>\n                <label for=\"message\">Your message</label>\n                <div [hidden]=\"messageV.valid || messageV.pristine\" class=\"red-text\">\n                    Thông điệp không được bỏ trống\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col s6\">\n                <button type=\"submit\" class=\"btn light-blue darken-4\" [disabled]=\"!form.form.valid\">Send</button>\n            </div>\n            <div class=\"col s6\" *ngIf=\"!checkLoading\">\n                <div class=\"preloader-wrapper big active\">\n                    <div class=\"spinner-layer spinner-blue\">\n                        <div class=\"circle-clipper left\">\n                            <div class=\"circle\"></div>\n                        </div>\n                        <div class=\"gap-patch\">\n                            <div class=\"circle\"></div>\n                        </div>\n                        <div class=\"circle-clipper right\">\n                            <div class=\"circle\"></div>\n                        </div>\n                    </div>\n                    <div class=\"spinner-layer spinner-red\">\n                        <div class=\"circle-clipper left\">\n                            <div class=\"circle\"></div>\n                        </div>\n                        <div class=\"gap-patch\">\n                            <div class=\"circle\"></div>\n                        </div>\n                        <div class=\"circle-clipper right\">\n                            <div class=\"circle\"></div>\n                        </div>\n                    </div>\n                    <div class=\"spinner-layer spinner-yellow\">\n                        <div class=\"circle-clipper left\">\n                            <div class=\"circle\"></div>\n                        </div>\n                        <div class=\"gap-patch\">\n                            <div class=\"circle\"></div>\n                        </div>\n                        <div class=\"circle-clipper right\">\n                            <div class=\"circle\"></div>\n                        </div>\n                    </div>\n                    <div class=\"spinner-layer spinner-green\">\n                        <div class=\"circle-clipper left\">\n                            <div class=\"circle\"></div>\n                        </div>\n                        <div class=\"gap-patch\">\n                            <div class=\"circle\"></div>\n                        </div>\n                        <div class=\"circle-clipper right\">\n                            <div class=\"circle\"></div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </form>\n</div>\n"
 
 /***/ },
 
-/***/ 737:
+/***/ 754:
 /***/ function(module, exports) {
 
-module.exports = "<!-- <script type=\"text/javascript\">\n        var options = [\n      {selector: '#about', offset: 50, callback: function(el) {\n        Materialize.toast(\"This is our ScrollFire Demo!\", 1500 );\n      } },\n      {selector: '#experience', offset: 205, callback: function(el) {\n        Materialize.toast(\"Please continue scrolling!\", 1500 );\n      } },\n      {selector: '#work', offset: 400, callback: function(el) {\n        // Materialize.showStaggeredList($(el));\n        Materialize.toast(\"Please continue scrolling!\", 1500 );\n      } },\n      {selector: '#contact', offset: 500, callback: function(el) {\n        // Materialize.fadeInImage($(el));\n        Materialize.toast(\"Please continue scrolling!\", 1500 );\n      } }\n    ];\n    Materialize.scrollFire(options);\n</script> -->\n\n<!-- header -->\n<header class=\"navbar-fixed\">\n    <nav class=\"white\">\n        <div>\n            <a class=\"brand-logo waves-effect waves m-l-xl\"><strong>Tuyen-ng</strong></a>\n            <!-- activate side-bav in mobile view -->\n            <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse black-text\" materialize=\"sideNav\" [materializeParams]=\"[{menuWidth: 300, edge: 'left', closeOnClick: true, draggable: true}]\">\n                <i class=\"material-icons\">menu</i>\n            </a>\n            <ul class=\"right hide-on-med-and-down\">\n                <li><a href=\"#about\">ABOUT</a></li>\n                <li><a href=\"#experience\">EXPERIENCES</a></li>\n                <li><a href=\"#work\">PROJECTS</a></li>\n                <li><a href=\"#contact\">CONTACT</a></li>\n            </ul>\n            <!-- navbar for mobile -->\n            <ul class=\"side-nav\" id=\"mobile-demo\">\n                <li><a class=\"waves-effect waves-green\" href=\"#about\">ABOUT</a></li>\n                <li><a class=\"waves-effect waves-green\" href=\"#experience\">EXPERIENCES</a></li>\n                <li><a class=\"waves-effect waves-green\" href=\"#work\">PROJECTS</a></li>\n                <li><a class=\"waves-effect waves-green\" href=\"#contact\">CONTACT</a></li>\n            </ul>\n        </div>\n    </nav>\n</header>\n<!-- /header -->\n<!-- content-->\n<!-- slide -->\n<section materialize=\"scrollSpy\" id=\"slide\" class=\"deep-purple lighten-5\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col s12 m5 l5 b\">\n                <h3>Nguyen Gia</h3>\n                <a routerLink=\"/layout/home\" routerLinkActive=\"active\" class=\"text-name\">Tuyen</a>\n                <h4><a href=\"http://hust.edu.vn\" class=\"grey-text text-lighten-1\">HUST Engineering</a></h4>\n                <div class=\"hide-on-small-only\">\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" href=\"https://www.facebook.com/javaoriami\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Facebook\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\" href=\"https://www.facebook.com/javaoriami\">\n                        <svg style=\"width:24px;height:24px;\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z\" />\n                        </svg>\n                    </a>\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" href=\"https://plus.google.com/117976078610191841927\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Google +\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\" href=\"https://plus.google.com/117976078610191841927\">\n                        <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z\" />\n                        </svg>\n                    </a>\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Linkedin\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\">\n                        <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z\" />\n                        </svg>\n                    </a>\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Twitter\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\">\n                        <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z\" />\n                        </svg>\n                    </a>\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Pinterest\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\">\n                        <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M13.25,17.25C12.25,17.25 11.29,16.82 10.6,16.1L9.41,20.1L9.33,20.36L9.29,20.34C9.04,20.75 8.61,21 8.12,21C7.37,21 6.75,20.38 6.75,19.62C6.75,19.56 6.76,19.5 6.77,19.44L6.75,19.43L6.81,19.21L9.12,12.26C9.12,12.26 8.87,11.5 8.87,10.42C8.87,8.27 10.03,7.62 10.95,7.62C11.88,7.62 12.73,7.95 12.73,9.26C12.73,10.94 11.61,11.8 11.61,13C11.61,13.94 12.37,14.69 13.29,14.69C16.21,14.69 17.25,12.5 17.25,10.44C17.25,7.71 14.89,5.5 12,5.5C9.1,5.5 6.75,7.71 6.75,10.44C6.75,11.28 7,12.12 7.43,12.85C7.54,13.05 7.6,13.27 7.6,13.5A1.25,1.25 0 0,1 6.35,14.75C5.91,14.75 5.5,14.5 5.27,14.13C4.6,13 4.25,11.73 4.25,10.44C4.25,6.33 7.73,3 12,3C16.27,3 19.75,6.33 19.75,10.44C19.75,13.72 17.71,17.25 13.25,17.25Z\" />\n                        </svg>\n                    </a>\n                </div>\n            </div>\n            <div class=\"col s12 m7 l7\">\n                <div class=\"ih-item circle effect13 from_left_and_right right\">\n                    <a routerLink=\"/layout/home\" routerLinkActive=\"active\">\n                        <div class=\"img\"><img src=\"assets/images/image-tuyen.jpg\" alt=\"img\"></div>\n                        <div class=\"info\">\n                            <div class=\"info-back\">\n                                <h3>Nguyễn Gia Tuyến</h3>\n                                <p>Detail about me</p>\n                            </div>\n                        </div>\n                    </a>\n                </div>\n                <!-- end normal -->\n                <!-- <div carousel style=\"height: 250px; perspective: 300px;\">\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen5.png\"></a>\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen.jpg\"></a>\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen3.png\"></a>\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen2.png\"></a>\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen4.png\"></a>\n                </div> -->\n            </div>\n        </div>\n    </div>\n</section>\n<!-- /slide -->\n<!-- about -->\n<section materialize=\"scrollSpy\" id=\"about\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col s12 m5 l5\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Đồ Sơn Hải Phòng\" src=\"assets/images/WP_20150621_07_55_14_Pro.jpg\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Itbee Team\" src=\"assets/images/IMG_0586.jpg\">\n            </div>\n            <div class=\"col s12 m7 l7\">\n                <h2>About me</h2>\n                <a routerLink=\"/pdf\" routerLinkActive=\"active\" class=\"right btn-floating blue lighten-5 waves-effect waves-blue button-icon center-align\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"My CV\">\n                    <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                        <path fill=\"#000000\" d=\"M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z\" />\n                    </svg>\n                </a>\n                <p>Hi, My name is Tuyen,</p>\n                <p>I'm 22 years old, My hometown in Viet Nam</p>\n                <p>I'm have been practice social network, web server and data analysis with my team for many year. I always want to use my skills to build big project.</p>\n                <p class=\"divider\"></p>\n                <!-- <a ui-sref=\"app.about\" class=\"right btn-floating deep-purple lighten-3 waves-effect waves-blue\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"READ MORE\"><i class=\"material-icons\">info</i></a> -->\n                <h3>My skills</h3>\n                <div>\n                    <h5>\n                        Presentation\n                        <span class=\"right\">70%</span>\n                    </h5>\n                    <div class=\"progress light-blue darken-1\">\n                        <div class=\"determinate light-blue darken-4\" style=\"width: 70%\"></div>\n                    </div>\n                </div>\n                <div>\n                    <h5>\n                        Research\n                        <span class=\"right\">80%</span>\n                    </h5>\n                    <div class=\"progress light-blue darken-1\">\n                        <div class=\"determinate light-blue darken-4\" style=\"width: 80%\"></div>\n                    </div>\n                </div>\n                <div>\n                    <h5>\n                        Team work\n                        <span class=\"right\">85%</span>\n                    </h5>\n                    <div class=\"progress light-blue darken-1\">\n                        <div class=\"determinate light-blue darken-4\" style=\"width: 85%\"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<!-- /about -->\n<!-- Experience -->\n<section materialize=\"scrollSpy\" id=\"experience\" class=\"deep-purple lighten-5\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col s12 m3\">\n                <img src=\"assets/images/playframework.png\" class=\"responsive-img\" />\n                <p>Play Framework is a web development framework with Scala and Java APIs that empowers developers to build applications with an ease unparalleled on the JVM.</p>\n            </div>\n            <div class=\"col s12 m3\">\n                <img src=\"assets/images/spark.png\" class=\"responsive-img\" />\n                <p>Apache Spark is a lightning-fast, distributed compute engine for processing large, streaming datasets.</p>\n            </div>\n            <div class=\"col s12 m3\">\n                <img src=\"assets/images/mysql.png\" class=\"responsive-img\" />\n                <p>MySQL is the world's most popular open source database. Whether you are a fast growing web property, technology ISV or large enterprise, MySQL can cost-effectively help you deliver high performance, scalable database applications.</p>\n            </div>\n            <div class=\"col s12 m3\">\n                <img src=\"assets/images/cassandra.png\" class=\"responsive-img\" />\n                <p>The Apache Cassandra database is the right choice when you need scalability and high availability without compromising performance.</p>\n            </div>\n        </div>\n    </div>\n</section>\n<!-- /Experience -->\n<!-- Work -->\n<section materialize=\"scrollSpy\" id=\"work\">\n    <div class=\"container\">\n        <h2>Projects</h2>\n        <div class=\"row\">\n            <div class=\"col s12 m4\">\n                <div class=\"card\">\n                    <div class=\"card-image\">\n                        <img materialize=\"materialbox\" class=\"responsive-img\" data-caption=\"BK Internship\" src=\"assets/images/img_bkinternship.jpeg\">\n                    </div>\n                    <div class=\"card-content\">\n                        <p>Trang quản lý thực tập viện CNTT_TT ĐHBKHN</p>\n                    </div>\n                    <div class=\"card-action\">\n                        <a href=\"#\">BK Internship</a>\n                    </div>\n                </div>\n                <!-- <div class=\"ih-item square effect1 left_and_right\">\n                    <a>\n                        <div class=\"img\">\n                            <img src=\"assets/images/img_bkinternship.jpeg\" class=\"responsive-img\">\n                        </div>\n                        <div class=\"info\">\n                            <h3>BK Internship</h3>\n                            <p>Trang quản lý thực tập viện CNTT_TT ĐHBKHN</p>\n                        </div>\n                    </a>\n                </div> -->\n            </div>\n            <div class=\"col s12 m4\">\n                <div class=\"card\">\n                    <div class=\"card-image\">\n                        <img materialize=\"materialbox\" class=\"responsive-img\" data-caption=\"Itbee\" src=\"assets/images/itbee.png\">\n                    </div>\n                    <div class=\"card-content\">\n                        <p>The social network in seeking talent, referring jobs for people, friend</p>\n                    </div>\n                    <div class=\"card-action\">\n                        <a href=\"http://itbee.vn\">Itbee</a>\n                    </div>\n                </div>\n                <!-- <div class=\"ih-item square effect1 left_and_right\">\n                    <a href=\"http://itbee.vn\">\n                        <div class=\"img\">\n                            <img src=\"assets/images/itbee.png\" class=\"responsive-img\">\n                        </div>\n                        <div class=\"info\">\n                            <h3>Itbee</h3>\n                            <p>The social network in seeking talent, referring jobs for people, friend</p>\n                        </div>\n                    </a>\n                </div> -->\n            </div>\n            <div class=\"col s12 m4\">\n                <div class=\"card\">\n                    <div class=\"card-image\">\n                        <img materialize=\"materialbox\" class=\"responsive-img\" data-caption=\"BK IoT\" src=\"assets/images/bkiot.png\">\n                    </div>\n                    <div class=\"card-content\">\n                        <p>Building platform OM2M in IoT system</p>\n                    </div>\n                    <div class=\"card-action\">\n                        <a href=\"#\">IoT research</a>\n                    </div>\n                </div>\n                <!-- <div class=\"ih-item square effect1 left_and_right\">\n                    <a>\n                        <div class=\"img\">\n                            <img src=\"assets/images/bkiot.png\" class=\"responsive-img\">\n                        </div>\n                        <div class=\"info\">\n                            <h3>IoT research</h3>\n                            <p>Building platform OM2M in IoT system</p>\n                        </div>\n                    </a>\n                </div> -->\n            </div>\n        </div>\n    </div>\n</section>\n<!-- /Work -->\n<!-- /content-->\n<!-- footer -->\n<footer materialize=\"scrollSpy\" id=\"contact\" class=\"page-footer deep-purple lighten-5\">\n    <div class=\"container\">\n        <!-- <app-contact></app-contact> -->\n        <!-- <ul materialize=\"collapsible\" class=\"collapsible\" data-collapsible=\"accordion\">\n            <li>\n                <div class=\"collapsible-header\"><i class=\"material-icons\">filter_drama</i>First</div>\n                <div class=\"collapsible-body\">\n                    <p>Lorem ipsum dolor sit amet.</p>\n                </div>\n            </li>\n            <li>\n                <div class=\"collapsible-header\"><i class=\"material-icons\">place</i>Second</div>\n                <div class=\"collapsible-body\">\n                    <p>Lorem ipsum dolor sit amet.</p>\n                </div>\n            </li>\n            <li>\n                <div class=\"collapsible-header\"><i class=\"material-icons\">whatshot</i>Third</div>\n                <div class=\"collapsible-body\">\n                    <p>Lorem ipsum dolor sit amet.</p>\n                </div>\n            </li>\n        </ul> -->\n        <div class=\"row\">\n            <div class=\"col l6 s12\">\n                <h5 class=\"black-text\"><strong>Contact me</strong></h5>\n                <!-- <p class=\"grey-text text-darken-4\">You can contact me via email or the phone</p> -->\n                <ul materialize=\"collapsible\" class=\"collapsible\" data-collapsible=\"accordion\">\n                    <li>\n                        <div class=\"collapsible-header blue-text text-darken-4\">\n                            Give me a message\n                        </div>\n                        <div class=\"collapsible-body\">\n                            <app-contact></app-contact>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n            <div class=\"col l4 offset-l2 s12\">\n                <h5 class=\"black-text\">Info about me</h5>\n                <ul>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Location</strong> Hanoi, Vietnam</a></li>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Website</strong> giatuyentiensinh.github.io</a></li>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Phone</strong> (+84) 167 629 8972</a></li>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Email</strong> giatuyentiensinh@gmail.com</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <div class=\"footer-copyright\">\n        <div class=\"container black-text\">\n            Copyright © 2017 by Tuyenng\n            <a class=\"grey-text text-darken-4 right\">Tuyen's site</a>\n        </div>\n    </div>\n</footer>\n<!-- /footer -->\n"
+module.exports = "<!-- <script type=\"text/javascript\">\n        var options = [\n      {selector: '#about', offset: 50, callback: function(el) {\n        Materialize.toast(\"This is our ScrollFire Demo!\", 1500 );\n      } },\n      {selector: '#experience', offset: 205, callback: function(el) {\n        Materialize.toast(\"Please continue scrolling!\", 1500 );\n      } },\n      {selector: '#work', offset: 400, callback: function(el) {\n        // Materialize.showStaggeredList($(el));\n        Materialize.toast(\"Please continue scrolling!\", 1500 );\n      } },\n      {selector: '#contact', offset: 500, callback: function(el) {\n        // Materialize.fadeInImage($(el));\n        Materialize.toast(\"Please continue scrolling!\", 1500 );\n      } }\n    ];\n    Materialize.scrollFire(options);\n</script> -->\n<!-- header -->\n<header class=\"navbar-fixed\">\n    <nav class=\"white\">\n        <div>\n            <a class=\"brand-logo waves-effect waves m-l-xl\"><strong>Tuyen-ng</strong></a>\n            <!-- activate side-bav in mobile view -->\n            <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse black-text\" materialize=\"sideNav\" [materializeParams]=\"[{menuWidth: 300, edge: 'left', closeOnClick: true, draggable: true}]\">\n                <i class=\"material-icons\">menu</i>\n            </a>\n            <ul class=\"right hide-on-med-and-down\">\n                <li><a href=\"#about\">ABOUT</a></li>\n                <li><a href=\"#experience\">EXPERIENCES</a></li>\n                <li><a href=\"#work\">PROJECTS</a></li>\n                <li><a href=\"#contact\">CONTACT</a></li>\n            </ul>\n            <!-- navbar for mobile -->\n            <ul class=\"side-nav\" id=\"mobile-demo\">\n                <li><a class=\"waves-effect waves-green\" href=\"#about\">ABOUT</a></li>\n                <li><a class=\"waves-effect waves-green\" href=\"#experience\">EXPERIENCES</a></li>\n                <li><a class=\"waves-effect waves-green\" href=\"#work\">PROJECTS</a></li>\n                <li><a class=\"waves-effect waves-green\" href=\"#contact\">CONTACT</a></li>\n            </ul>\n        </div>\n    </nav>\n</header>\n<!-- /header -->\n<!-- content-->\n<!-- slide -->\n<section materialize=\"scrollSpy\" id=\"slide\" class=\"deep-purple lighten-5\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col s12 m5 l5 b\">\n                <h3>Nguyen Gia</h3>\n                <a routerLink=\"/layout/home\" routerLinkActive=\"active\" class=\"text-name\">Tuyen</a>\n                <h4><a href=\"http://hust.edu.vn\" class=\"grey-text text-lighten-1\">HUST Engineering</a></h4>\n                <div class=\"hide-on-small-only\">\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" href=\"https://www.facebook.com/javaoriami\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Facebook\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\" href=\"https://www.facebook.com/javaoriami\">\n                        <svg style=\"width:24px;height:24px;\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z\" />\n                        </svg>\n                    </a>\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" href=\"https://plus.google.com/117976078610191841927\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Google +\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\" href=\"https://plus.google.com/117976078610191841927\">\n                        <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z\" />\n                        </svg>\n                    </a>\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Linkedin\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\">\n                        <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z\" />\n                        </svg>\n                    </a>\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Twitter\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\">\n                        <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z\" />\n                        </svg>\n                    </a>\n                    <!-- <a class=\"btn-floating waves-effect waves white center-align button-icon\" tooltipped data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Pinterest\"> -->\n                    <a class=\"btn-floating waves-effect waves white center-align button-icon\">\n                        <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M13.25,17.25C12.25,17.25 11.29,16.82 10.6,16.1L9.41,20.1L9.33,20.36L9.29,20.34C9.04,20.75 8.61,21 8.12,21C7.37,21 6.75,20.38 6.75,19.62C6.75,19.56 6.76,19.5 6.77,19.44L6.75,19.43L6.81,19.21L9.12,12.26C9.12,12.26 8.87,11.5 8.87,10.42C8.87,8.27 10.03,7.62 10.95,7.62C11.88,7.62 12.73,7.95 12.73,9.26C12.73,10.94 11.61,11.8 11.61,13C11.61,13.94 12.37,14.69 13.29,14.69C16.21,14.69 17.25,12.5 17.25,10.44C17.25,7.71 14.89,5.5 12,5.5C9.1,5.5 6.75,7.71 6.75,10.44C6.75,11.28 7,12.12 7.43,12.85C7.54,13.05 7.6,13.27 7.6,13.5A1.25,1.25 0 0,1 6.35,14.75C5.91,14.75 5.5,14.5 5.27,14.13C4.6,13 4.25,11.73 4.25,10.44C4.25,6.33 7.73,3 12,3C16.27,3 19.75,6.33 19.75,10.44C19.75,13.72 17.71,17.25 13.25,17.25Z\" />\n                        </svg>\n                    </a>\n                </div>\n            </div>\n            <div class=\"col s12 m7 l7\">\n                <div class=\"ih-item circle effect13 from_left_and_right right\">\n                    <a routerLink=\"/layout/home\" routerLinkActive=\"active\">\n                        <div class=\"img\"><img src=\"assets/images/image-tuyen.jpg\" alt=\"img\"></div>\n                        <div class=\"info\">\n                            <div class=\"info-back\">\n                                <h3>Nguyễn Gia Tuyến</h3>\n                                <p>Detail about me</p>\n                            </div>\n                        </div>\n                    </a>\n                </div>\n                <!-- end normal -->\n                <!-- <div carousel style=\"height: 250px; perspective: 300px;\">\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen5.png\"></a>\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen.jpg\"></a>\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen3.png\"></a>\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen2.png\"></a>\n                    <a class=\"carousel-item\" href=\"javascript:void(0);\"><img src=\"assets/images/image-tuyen4.png\"></a>\n                </div> -->\n            </div>\n        </div>\n    </div>\n</section>\n<!-- /slide -->\n<!-- about -->\n<section materialize=\"scrollSpy\" id=\"about\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col s12 m5 l5\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Đồ Sơn Hải Phòng\" src=\"assets/images/WP_20150621_07_55_14_Pro.jpg\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Itbee Team\" src=\"assets/images/IMG_0586.jpg\">\n            </div>\n            <div class=\"col s12 m7 l7\">\n                <h2>About me</h2>\n                <a routerLink=\"/pdf\" routerLinkActive=\"active\" class=\"right btn-floating blue lighten-5 waves-effect waves-blue button-icon center-align\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"My CV\">\n                    <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                        <path fill=\"#000000\" d=\"M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z\" />\n                    </svg>\n                </a>\n                <p>Hi, My name is Tuyen,</p>\n                <p>I'm 22 years old, My hometown in Viet Nam</p>\n                <p>I'm have been practice social network, web server and data analysis with my team for many year. I always want to use my skills to build big project.</p>\n                <p class=\"divider\"></p>\n                <!-- <a ui-sref=\"app.about\" class=\"right btn-floating deep-purple lighten-3 waves-effect waves-blue\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"READ MORE\"><i class=\"material-icons\">info</i></a> -->\n                <h3>My skills</h3>\n                <div>\n                    <h5>\n                        Presentation\n                        <span class=\"right\">70%</span>\n                    </h5>\n                    <div class=\"progress light-blue darken-1\">\n                        <div class=\"determinate light-blue darken-4\" style=\"width: 70%\"></div>\n                    </div>\n                </div>\n                <div>\n                    <h5>\n                        Research\n                        <span class=\"right\">80%</span>\n                    </h5>\n                    <div class=\"progress light-blue darken-1\">\n                        <div class=\"determinate light-blue darken-4\" style=\"width: 80%\"></div>\n                    </div>\n                </div>\n                <div>\n                    <h5>\n                        Team work\n                        <span class=\"right\">85%</span>\n                    </h5>\n                    <div class=\"progress light-blue darken-1\">\n                        <div class=\"determinate light-blue darken-4\" style=\"width: 85%\"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<!-- /about -->\n<!-- Experience -->\n<section materialize=\"scrollSpy\" id=\"experience\" class=\"deep-purple lighten-5\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col s12 m3\">\n                <img src=\"assets/images/playframework.png\" class=\"responsive-img\" />\n                <p>Play Framework is a web development framework with Scala and Java APIs that empowers developers to build applications with an ease unparalleled on the JVM.</p>\n            </div>\n            <div class=\"col s12 m3\">\n                <img src=\"assets/images/spark.png\" class=\"responsive-img\" />\n                <p>Apache Spark is a lightning-fast, distributed compute engine for processing large, streaming datasets.</p>\n            </div>\n            <div class=\"col s12 m3\">\n                <img src=\"assets/images/mysql.png\" class=\"responsive-img\" />\n                <p>MySQL is the world's most popular open source database. Whether you are a fast growing web property, technology ISV or large enterprise, MySQL can cost-effectively help you deliver high performance, scalable database applications.</p>\n            </div>\n            <div class=\"col s12 m3\">\n                <img src=\"assets/images/cassandra.png\" class=\"responsive-img\" />\n                <p>The Apache Cassandra database is the right choice when you need scalability and high availability without compromising performance.</p>\n            </div>\n        </div>\n    </div>\n</section>\n<!-- /Experience -->\n<!-- Work -->\n<section materialize=\"scrollSpy\" id=\"work\">\n    <div class=\"container\">\n        <h2>Projects</h2>\n        <div class=\"row\">\n            <div class=\"col s12 m4\">\n                <div class=\"card\">\n                    <div class=\"card-image\">\n                        <img materialize=\"materialbox\" class=\"responsive-img\" data-caption=\"BK Internship\" src=\"assets/images/img_bkinternship.jpeg\">\n                    </div>\n                    <div class=\"card-content\">\n                        <p>Trang quản lý thực tập viện CNTT_TT ĐHBKHN</p>\n                    </div>\n                    <div class=\"card-action\">\n                        <a href=\"#\">BK Internship</a>\n                    </div>\n                </div>\n                <!-- <div class=\"ih-item square effect1 left_and_right\">\n                    <a>\n                        <div class=\"img\">\n                            <img src=\"assets/images/img_bkinternship.jpeg\" class=\"responsive-img\">\n                        </div>\n                        <div class=\"info\">\n                            <h3>BK Internship</h3>\n                            <p>Trang quản lý thực tập viện CNTT_TT ĐHBKHN</p>\n                        </div>\n                    </a>\n                </div> -->\n            </div>\n            <div class=\"col s12 m4\">\n                <div class=\"card\">\n                    <div class=\"card-image\">\n                        <img materialize=\"materialbox\" class=\"responsive-img\" data-caption=\"Itbee\" src=\"assets/images/itbee.png\">\n                    </div>\n                    <div class=\"card-content\">\n                        <p>The social network in seeking talent, referring jobs for people, friend</p>\n                    </div>\n                    <div class=\"card-action\">\n                        <a href=\"http://itbee.vn\">Itbee</a>\n                    </div>\n                </div>\n                <!-- <div class=\"ih-item square effect1 left_and_right\">\n                    <a href=\"http://itbee.vn\">\n                        <div class=\"img\">\n                            <img src=\"assets/images/itbee.png\" class=\"responsive-img\">\n                        </div>\n                        <div class=\"info\">\n                            <h3>Itbee</h3>\n                            <p>The social network in seeking talent, referring jobs for people, friend</p>\n                        </div>\n                    </a>\n                </div> -->\n            </div>\n            <div class=\"col s12 m4\">\n                <div class=\"card\">\n                    <div class=\"card-image\">\n                        <img materialize=\"materialbox\" class=\"responsive-img\" data-caption=\"BK IoT\" src=\"assets/images/bkiot.png\">\n                    </div>\n                    <div class=\"card-content\">\n                        <p>Building platform OM2M in IoT system</p>\n                    </div>\n                    <div class=\"card-action\">\n                        <a href=\"#\">IoT research</a>\n                    </div>\n                </div>\n                <!-- <div class=\"ih-item square effect1 left_and_right\">\n                    <a>\n                        <div class=\"img\">\n                            <img src=\"assets/images/bkiot.png\" class=\"responsive-img\">\n                        </div>\n                        <div class=\"info\">\n                            <h3>IoT research</h3>\n                            <p>Building platform OM2M in IoT system</p>\n                        </div>\n                    </a>\n                </div> -->\n            </div>\n        </div>\n    </div>\n</section>\n<!-- /Work -->\n<!-- /content-->\n<!-- footer -->\n<footer materialize=\"scrollSpy\" id=\"contact\" class=\"page-footer deep-purple lighten-5\">\n    <div class=\"container\">\n        <!-- <app-contact></app-contact> -->\n        <!-- <ul materialize=\"collapsible\" class=\"collapsible\" data-collapsible=\"accordion\">\n            <li>\n                <div class=\"collapsible-header\"><i class=\"material-icons\">filter_drama</i>First</div>\n                <div class=\"collapsible-body\">\n                    <p>Lorem ipsum dolor sit amet.</p>\n                </div>\n            </li>\n            <li>\n                <div class=\"collapsible-header\"><i class=\"material-icons\">place</i>Second</div>\n                <div class=\"collapsible-body\">\n                    <p>Lorem ipsum dolor sit amet.</p>\n                </div>\n            </li>\n            <li>\n                <div class=\"collapsible-header\"><i class=\"material-icons\">whatshot</i>Third</div>\n                <div class=\"collapsible-body\">\n                    <p>Lorem ipsum dolor sit amet.</p>\n                </div>\n            </li>\n        </ul> -->\n        <div class=\"row\">\n            <div class=\"col l6 s12\">\n                <h5 class=\"black-text\"><strong>Contact me</strong></h5>\n                <!-- <p class=\"grey-text text-darken-4\">You can contact me via email or the phone</p> -->\n                <ul materialize=\"collapsible\" class=\"collapsible\" data-collapsible=\"accordion\">\n                    <li>\n                        <div class=\"collapsible-header blue-text text-darken-4\">\n                            Give me a message\n                        </div>\n                        <div class=\"collapsible-body\">\n                            <app-contact></app-contact>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n            <div class=\"col l4 offset-l2 s12\">\n                <h5 class=\"black-text\">Info about me</h5>\n                <ul>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Location</strong> Hanoi, Vietnam</a></li>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Website</strong> giatuyentiensinh.github.io</a></li>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Phone</strong> (+84) 167 629 8972</a></li>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Email</strong> giatuyentiensinh@gmail.com</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <div class=\"footer-copyright\">\n        <div class=\"container black-text\">\n            Copyright © 2017 by Tuyenng\n            <a class=\"grey-text text-darken-4 right\">Tuyen's site</a>\n        </div>\n    </div>\n</footer>\n<!-- /footer -->\n"
 
 /***/ },
 
-/***/ 738:
+/***/ 755:
 /***/ function(module, exports) {
 
 module.exports = "<div class=\"row blue-grey lighten-4\">\n  <div class=\"col s12 m6\">\n    <div class=\"card small cyan darken-4\">\n      <img src=\"assets/images/image-tuananh.jpg\" class=\"img-profile circle responsive-img right\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Công chúa sữa chua\">\n      <div class=\"card-content white-text\">\n        <span class=\"card-title\">\n\t\t\t\t\t<span class=\"hide-on-small-only\">{{ 'FRIEND.F1.FIRST_NAME' | translate }}</span>\n        <span>{{ 'FRIEND.F1.LAST_NAME' | translate }}</span>\n        </span>\n        <p class=\"cyan-text text-lighten-4\">{{ 'FRIEND.F1.DESCRIPTION' | translate }}</p>\n      </div>\n      <div class=\"card-action\">\n        <a class=\"point\" onclick=\"Materialize.toast('Chưa cập nhật', 4000)\">{{ 'FRIEND.DETAIL' | translate }}</a>\n      </div>\n    </div>\n  </div>\n  <div class=\"col s12 m6\">\n    <div class=\"card small green darken-4\">\n      <img src=\"assets/images/image-dinhphuc.jpg\" class=\"img-profile circle responsive-img right\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Hoàng tử thằn lằn\">\n      <div class=\"card-content white-text\">\n        <span class=\"card-title\">\n\t\t\t\t\t<span class=\"hide-on-small-only\">{{ 'FRIEND.F2.FIRST_NAME' | translate }}</span>\n        <span>{{ 'FRIEND.F2.LAST_NAME' | translate }}</span>\n        </span>\n        <p class=\"green-text text-lighten-4\">{{ 'FRIEND.F2.DESCRIPTION' | translate }}</p>\n      </div>\n      <div class=\"card-action\">\n        <a class=\"point\" onclick=\"Materialize.toast('Chưa cập nhật', 4000)\">DETAIL</a>\n      </div>\n    </div>\n  </div>\n  <div class=\"col s12 m6 offset-m3\">\n    <div class=\"card small indigo draken-4\">\n      <img src=\"assets/images/image-tuyen.jpg\" class=\"img-profile circle responsive-img right\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"It't me\" />\n      <div class=\"card-content white-text\">\n        <span class=\"card-title\">\n\t\t\t\t\t<span class=\"hide-on-small-only\">{{ 'FRIEND.F3.FIRST_NAME' | translate }}</span>\n        <span>{{ 'FRIEND.F3.LAST_NAME' | translate }}</span>\n        </span>\n        <p>{{ 'FRIEND.F3.DESCRIPTION' | translate }}</p>\n      </div>\n      <div class=\"card-action\">\n        <a class=\"point\" onclick=\"Materialize.toast('Chưa cập nhật', 4000)\">{{ 'FRIEND.DETAIL' | translate }}</a>\n      </div>\n    </div>\n  </div>\n  <div class=\"col s12 m6\">\n    <div class=\"card small pink darken-4\">\n      <img src=\"assets/images/image-kimanh.jpg\" class=\"img-profile circle responsive-img right\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Bựa nương\">\n      <div class=\"card-content white-text\">\n        <span class=\"card-title\">\n\t\t\t\t\t<span class=\"hide-on-small-only\">{{ 'FRIEND.F4.FIRST_NAME' | translate }}</span>\n        <span>{{ 'FRIEND.F4.LAST_NAME' | translate }}</span>\n        </span>\n        <p class=\"pink-text text-lighten-1\">{{ 'FRIEND.F4.DESCRIPTION' | translate }}</p>\n      </div>\n      <div class=\"card-action\">\n        <a class=\"point\" onclick=\"Materialize.toast('Chưa cập nhật', 4000)\">{{ 'FRIEND.DETAIL' | translate }}</a>\n      </div>\n    </div>\n  </div>\n  <div class=\"col s12 m6\">\n    <div class=\"card small blue darken-4\">\n      <img src=\"assets/images/image-anhtuan.jpg\" class=\"img-profile circle responsive-img right\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"NaN\">\n      <div class=\"card-content white-text\">\n        <span class=\"card-title\">\n\t\t\t\t\t<span class=\"hide-on-small-only\">{{ 'FRIEND.F5.FIRST_NAME' | translate }}</span>\n        <span>{{ 'FRIEND.F5.LAST_NAME' | translate }}</span>\n        </span>\n        <p class=\"blue-text text-lighten-4\">{{ 'FRIEND.F5.DESCRIPTION' | translate }}</p>\n      </div>\n      <div class=\"card-action\">\n        <a class=\"point\" onclick=\"Materialize.toast('Chưa cập nhật', 4000)\">{{ 'FRIEND.DETAIL' | translate }}</a>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ },
 
-/***/ 739:
+/***/ 756:
 /***/ function(module, exports) {
 
 module.exports = "<div>\n    <!--\n  <div parallax-container>\n    <div materialize=\"parallax\">\n      <img class=\"responsive-img\" src=\"assets/images/WP_20150118_001.jpg\"/>\n    </div>\n  </div> -->\n    <div class=\"parallax-container\">\n        <div class=\"container center-align\">\n            <h1 class=\"hoverable waves-effect waves-red blue-text text-accent-4\">\n              Nguyễn Gia Tuyến\n            </h1>\n            <p>\n                <strong class=\"hoverable grey-text text-darken-3 lighten-3 waves-effect waves-green\">STATISTICS MEAN NEVER HAVING TO SAY YOU'RE CERTAIN</strong>\n            </p>\n        </div>\n        <div materialize=\"parallax\">\n            <img src=\"assets/images/Cycle.jpeg\" />\n        </div>\n    </div>\n    <div class=\"section white\">\n        <!-- Trang web ca nhan cua toi -->\n        <!-- <div class=\"row container\">\n        <div class=\"progress light-green\">\n          <div class=\"indeterminate red darken-4\"></div>\n        </div>\n      </div> -->\n    </div>\n</div>\n<section>\n    <div materialize=\"carousel\" [materializeParams]=\"[{full_width: true}]\" class=\"carousel carousel-slider center\" data-indicators=\"true\">\n        <div class=\"carousel-item\">\n            <div class=\"col l3 m4 s6\">\n                <h2 class=\"text-img flow-text\">Bình minh ở Đồ Sơn</h2>\n                <img class=\"image responsive-img\" src=\"assets/images/WP_20150621_07_55_12_Pro.jpg\" />\n            </div>\n        </div>\n        <div class=\"carousel-item\">\n            <h2 class=\"text-img flow-text white-text\">Liên hoan tân niên 2015</h2>\n            <img class=\"image responsive-img\" src=\"assets/images/WP_20160123_07_42_08_Pro.jpg\" />\n        </div>\n        <div class=\"carousel-item\">\n            <!-- <img src=\"assets/images/WP_20150118_07_27_34_Pro.jpg\"/> -->\n            <h2 class=\"text-img flow-text\">Itbee team</h2>\n            <img class=\"image responsive-img\" src=\"assets/images/IMG_0586.jpg\" />\n        </div>\n    </div>\n</section>\n<section class=\"m-t m-b\">\n    <div class=\"col s12 m12 l12\">\n        <h1 class=\"m-l blue-text text-darken-4 light waves-effect waves-yellow\" translate=\"HOME.FRIEND.TITLE\"></h1>\n        <section>\n            <div class=\"parallax-container\">\n                <!-- <div materialize=\"parallax\"><img class=\"image-test\" src=\"assets/images/WP_20150619_12_51_36_Pro.jpg\"></div> -->\n                <div materialize=\"parallax\"><img class=\"image-test\" src=\"assets/images/weavesilk2.png\"></div>\n            </div>\n        </section>\n        <h1 class=\"m-l blue-text text-darken-4 light right-align m-r\" onclick=\"Materialize.fadeInImage('.image-test');\" ng-click=\"showAnimation();\" translate=\"HOME.FRIEND.TITLE\"></h1>\n        <div class=\"m flow-text right-align\">\n        </div>\n        <!-- <div class=\"row\">\n      <img class=\"responsive-img pull-right\" align=\"right\" src=\"assets/images/GemmaChan.png\" />\n    </div> -->\n        <section>\n            <div class=\"parallax-container\">\n                <div materialize=\"parallax\">\n                    <img src=\"assets/images/WP_20150118_001.jpg\">\n                    <!-- <img class=\"image-test\" src=\"assets/images/WP_20150117_07_34_42_Pro.jpg\"> -->\n                </div>\n                <img class=\"responsive-img\" align=\"right\" src=\"assets/images/GemmaChan.png\" />\n            </div>\n        </section>\n    </div>\n</section>\n<!-- <div class=\"row m\">\n  <div class=\"right\">\n    <div class=\"chip\">\n      <img src=\"assets/images/image-anhtuan.jpg\" alt=\"Anh Tuấn\"> Anh Tuấn\n    </div>\n    <div class=\"chip\">\n      <img src=\"assets/images/image-dinhphuc.jpg\" alt=\"Đình Phúc\"> Đình Phúc\n    </div>\n    <div class=\"chip\">\n      <img src=\"assets/images/image-kimanh.jpg\" alt=\"Kim Anh\"> Kim Anh\n    </div>\n    <div class=\"chip\">\n      <img src=\"assets/images/image-tuananh.jpg\" alt=\"Tuấn Ánh\"> Tuấn Ánh\n    </div>\n    <div class=\"chip\">\n      <img src=\"assets/images/image-tuyen.jpg\" alt=\"Tuấn Ánh\"> Còn nữa, đang cập nhật ...\n    </div>\n  </div>\n</div> -->\n<div class=\"container m flow-text blue-text text-darken-4\">\n    <h1>Ảnh lúc sinh viên</h1>\n</div>\n<section class=\"m-t\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col s4 m4 l4\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Phượt Mộc Châu\" src=\"assets/images/WP_20150117_07_34_42_Pro.jpg\">\n            </div>\n            <div class=\"col s4 m4 l4\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Karaoke\" src=\"assets/images/WP_20150307_07_34_42_Pro.jpg\">\n            </div>\n            <div class=\"col s4 m4 l4\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Thư viện Tạ Quang Bửu năm nhất\" src=\"assets/images/mehust.jpg\">\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row col s12 m12 l12\">\n            <div class=\"progress amber darken-4\">\n                <div class=\"indeterminate light-green\"></div>\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col s4 m4 l4\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Khởi nghiệp cùng Kawai\" src=\"assets/images/kawai.jpg\">\n            </div>\n            <div class=\"col s4 m4 l4\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Đồ Sơn Hải Phòng\" src=\"assets/images/WP_20150621_07_55_14_Pro.jpg\">\n            </div>\n            <div class=\"col s4 m4 l4\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Team bê tráp cho a Trung\" src=\"assets/images/WP_20151123_07_18_57_Pro.jpg\">\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row col s12 m12 l12\">\n            <div class=\"progress lime darken-1\">\n                <div class=\"indeterminate\"></div>\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col s4 m4 l4\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Phượt Mộc Châu\" src=\"assets/images/WP_20150118_07_40_34_Pro.jpg\">\n            </div>\n            <div class=\"col s4 m4 l4\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Ăn bún cùng với Ánh muội\" src=\"assets/images/WP_20151123_07_19_14_Pro.jpg\">\n            </div>\n            <div class=\"col s4 m4 l4\">\n                <img materialize=\"materialbox\" class=\"responsive-img hoverable\" data-caption=\"Ăn bún cùng với Phúc muội\" src=\"assets/images/WP_20151123_07_19_20_Pro.jpg\">\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"container\">\n    <div class=\"blue-text text-darken-4\">\n        <h4>Give me a message</h4>\n    </div>\n    <app-contact></app-contact>\n</section>\n"
 
 /***/ },
 
-/***/ 740:
+/***/ 757:
 /***/ function(module, exports) {
 
 module.exports = "<header class=\"navbar-fixed\">\n    <nav>\n        <div class=\"nav-wrapper light-blue darken-4\">\n            <a routerLink=\"/cv\" routerLinkActive=\"active\" class=\"brand-logo waves-effect waves-light m-l\"><span class=\"light\">ng</span> - <span class=\"flow-text\">Tuyến</span></a>\n            <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse\" materialize=\"sideNav\" [materializeParams]=\"[{menuWidth: 300, edge: 'left', closeOnClick: true, draggable: true}]\">\n                <i class=\"material-icons\">menu</i>\n            </a>\n            <ul class=\"right hide-on-med-and-down\">\n                <li class=\"light-blue darken-4 waves-effect waves-light\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Trang chủ\">\n                    <a routerLink=\"/layout/home\" routerLinkActive=\"active\">\n                        <i class=\"material-icons\">home</i>\n                        <!-- <svg style=\"width:25px;height:25px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\" />\n                        </svg> -->\n                    </a>\n                </li>\n                <li class=\"light-blue darken-3 waves-effect waves-light\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Kỹ năng\">\n                    <a routerLink=\"/layout/skill\" routerLinkActive=\"active\">\n                        <i class=\"material-icons\">wifi</i>\n                        <!-- <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M12,21L15.6,16.2C14.6,15.45 13.35,15 12,15C10.65,15 9.4,15.45 8.4,16.2L12,21M12,3C7.95,3 4.21,4.34 1.2,6.6L3,9C5.5,7.12 8.62,6 12,6C15.38,6 18.5,7.12 21,9L22.8,6.6C19.79,4.34 16.05,3 12,3M12,9C9.3,9 6.81,9.89 4.8,11.4L6.6,13.8C8.1,12.67 9.97,12 12,12C14.03,12 15.9,12.67 17.4,13.8L19.2,11.4C17.19,9.89 14.7,9 12,9Z\" />\n                        </svg> -->\n                    </a>\n                </li>\n                <li class=\"light-blue darken-2 waves-effect waves-light\" materialize=\"tooltip\" data-position=\"bottom\" data-delay=\"50\" data-tooltip=\"Dự án đã tham gia\">\n                    <a routerLink=\"/layout/project\" routerLinkActive=\"active\">\n                        <i class=\"material-icons\">dialpad</i>\n                        <!-- <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M12,19A2,2 0 0,0 10,21A2,2 0 0,0 12,23A2,2 0 0,0 14,21A2,2 0 0,0 12,19M6,1A2,2 0 0,0 4,3A2,2 0 0,0 6,5A2,2 0 0,0 8,3A2,2 0 0,0 6,1M6,7A2,2 0 0,0 4,9A2,2 0 0,0 6,11A2,2 0 0,0 8,9A2,2 0 0,0 6,7M6,13A2,2 0 0,0 4,15A2,2 0 0,0 6,17A2,2 0 0,0 8,15A2,2 0 0,0 6,13M18,5A2,2 0 0,0 20,3A2,2 0 0,0 18,1A2,2 0 0,0 16,3A2,2 0 0,0 18,5M12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13M18,13A2,2 0 0,0 16,15A2,2 0 0,0 18,17A2,2 0 0,0 20,15A2,2 0 0,0 18,13M18,7A2,2 0 0,0 16,9A2,2 0 0,0 18,11A2,2 0 0,0 20,9A2,2 0 0,0 18,7M12,7A2,2 0 0,0 10,9A2,2 0 0,0 12,11A2,2 0 0,0 14,9A2,2 0 0,0 12,7M12,1A2,2 0 0,0 10,3A2,2 0 0,0 12,5A2,2 0 0,0 14,3A2,2 0 0,0 12,1Z\" />\n                        </svg> -->\n                    </a>\n                </li>\n                <li class=\"light-blue darken-1 waves-effect waves-light\">\n                    <a routerLink=\"/layout/friend\" routerLinkActive=\"active\">\n                        <i class=\"material-icons\">people</i>\n                        <!-- <svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\n                            <path fill=\"#000000\" d=\"M4.5,11A1.5,1.5 0 0,0 6,9.5A1.5,1.5 0 0,0 4.5,8A1.5,1.5 0 0,0 3,9.5A1.5,1.5 0 0,0 4.5,11M22.17,9.17C22.17,5.3 19.04,2.17 15.17,2.17A7,7 0 0,0 8.17,9.17C8.17,12.64 10.69,15.5 14,16.06V20H6V17H7V13A1,1 0 0,0 6,12H3A1,1 0 0,0 2,13V17H3V22H19V20H16V16.12C19.47,15.71 22.17,12.76 22.17,9.17Z\" />\n                        </svg> -->\n                    </a>\n                </li>\n            </ul>\n            <ul class=\"side-nav\" id=\"mobile-demo\">\n                <li><a class=\"waves-effect waves-blue\" routerLink=\"/layout/home\" routerLinkActive=\"active\">Trang chủ</a></li>\n                <li><a class=\"waves-effect waves-blue\" routerLink=\"/layout/skill\" routerLinkActive=\"active\">Kỹ năng</a></li>\n                <li><a class=\"waves-effect waves-blue\" routerLink=\"/layout/project\" routerLinkActive=\"active\">Dự án đã tham gia</a></li>\n                <li><a class=\"waves-effect waves-blue\" routerLink=\"/layout/friend\" routerLinkActive=\"active\">Thông tin</a></li>\n            </ul>\n        </div>\n    </nav>\n</header>\n<router-outlet></router-outlet>\n<footer class=\"page-footer light-blue darken-4\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col l3 s12\">\n                <h5 class=\"white-text\">\n                    <!-- <span>Auth</span> -->\n                    <span>{{ 'FOOTER.CONTENT.AUTH' | translate }}</span>\n                    <i class=\"material-icons\">fingerprint</i>\n                </h5>\n                <p class=\"waves-effect waves-light grey-text text-lighten-4\">\n                    {{ 'FOOTER.CONTENT.NAME' | translate }}\n                </p>\n            </div>\n            <div class=\"col l7 offset-l2 s12\">\n                <h5 class=\"waves-effect waves-light white-text\"> \n                {{ 'FOOTER.LINK.TITLE' | translate }}\n                <i class=\"material-icons\">school</i>\n                </h5>\n                <ul>\n                    <li class=\"waves-effect waves-light\">\n                        <a class=\"while-text bold\">{{ 'FOOTER.LINK.L1' | translate }}</a>\n                    </li>\n                    <li class=\"waves-effect waves-light\">\n                        <a class=\"while-text bold\">{{ 'FOOTER.LINK.L2' | translate }}</a>\n                    </li>\n                    <li class=\"waves-effect waves-light\">\n                        <a class=\"while-text bold\">{{ 'FOOTER.LINK.L3' | translate }}</a>\n                    </li>\n                    <li class=\"waves-effect waves-light\">\n                        <a class=\"while-text bold\">{{ 'FOOTER.LINK.L4' | translate }}</a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <div class=\"footer-copyright\">\n        <div class=\"container\">\n            <span>{{ 'FOOTER.COPYRIGHT.TEXT' | translate }}</span>\n            <a class=\"grey-text text-lighten-4 right waves-effect waves-light\">\n            {{ 'FOOTER.COPYRIGHT.REF' | translate }}\n            </a>\n        </div>\n    </div>\n</footer>\n"
 
 /***/ },
 
-/***/ 741:
+/***/ 758:
 /***/ function(module, exports) {
 
 module.exports = "<header class=\"navbar-fixed\">\n    <nav class=\"white\">\n        <div>\n            <a class=\"brand-logo waves-effect waves m-l-xl\" routerLink=\"/cv\" routerLinkActive=\"active\"><strong class=\"purple-text text-darken-4\">HOME</strong></a>\n            <!-- activate side-bav in mobile view -->\n            <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse black-text\" materialize=\"sideNav\" [materializeParams]=\"[{menuWidth: 300, edge: 'left', closeOnClick: true, draggable: true}]\">\n                <i class=\"material-icons\">menu</i>\n            </a>\n            <ul class=\"right hide-on-med-and-down\">\n                <li><a href=\"/assets/pdf/my-cv.pdf\" target=\"_blank\" class=\"waves-effect waves purple-text text-darken-4\">DOWNLOAD</a></li>\n            </ul>\n            <!-- navbar for mobile -->\n            <ul class=\"side-nav\" id=\"mobile-demo\">\n                <li><a class=\"waves-effect waves purple-text text-darken-4\" target=\"_blank\" href=\"/assets/pdf/my-cv.pdf\">DOWNLOAD</a></li>\n            </ul>\n        </div>\n    </nav>\n</header>\n\n<div class=\"section\" style=\"background: url('/assets/images/aseanopbg.jpg')\">\n    <div class=\"row\">\n        <div class=\"col s12 m6 l6\">\n            <pdf-viewer [src]=\"'assets/pdf/my-cv.pdf'\" [zoom]=\"1.1\" [page]=\"1\" [original-size]=\"true\" style=\"display: block;\"></pdf-viewer>\n        </div>\n        <div class=\"col s12 m6 l6\">\n            <pdf-viewer [src]=\"'assets/pdf/my-cv.pdf'\" [zoom]=\"1.0\" [page]=\"2\" [original-size]=\"true\" style=\"display: block;\"></pdf-viewer>\n        </div>\n    </div>\n</div>\n<!-- <pdf-viewer [src]=\"'assets/pdf/my-cv.pdf'\" [page]=\"1\" [original-size]=\"true\" style=\"display: block;\"></pdf-viewer>\n<pdf-viewer [src]=\"'assets/pdf/my-cv.pdf'\" [page]=\"2\" [original-size]=\"true\" style=\"display: block;\"></pdf-viewer> -->\n<footer class=\"page-footer deep-purple lighten-5\">\n    <div class=\"container\">\n        <!-- <app-contact></app-contact> -->\n        <div class=\"row\">\n            <div class=\"col l6 s12\">\n                <h5 class=\"black-text\"><strong>Contact me</strong></h5>\n                <!-- <p class=\"grey-text text-darken-4\">You can contact me via email or the phone</p> -->\n                <ul materialize=\"collapsible\" class=\"collapsible\" data-collapsible=\"accordion\">\n                    <li>\n                        <div class=\"collapsible-header blue-text text-darken-4\">\n                            Give me a message\n                        </div>\n                        <div class=\"collapsible-body\">\n                            <app-contact></app-contact>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n            <div class=\"col l4 offset-l2 s12\">\n                <h5 class=\"black-text\">Info about <a href=\"/assets/id_rsa.pub\">me</a></h5>\n                <ul>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Location</strong> Hanoi, Vietnam</a></li>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Website</strong> giatuyentiensinh.github.io</a></li>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Phone</strong> (+84) 167 629 8972</a></li>\n                    <li><a class=\"grey-text text-darken-3\"><strong>Email</strong> giatuyentiensinh@gmail.com</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <div class=\"footer-copyright\">\n        <div class=\"container black-text\">\n            Copyright © 2017 by Tuyenng\n            <a class=\"grey-text text-darken-4 right\">Tuyen's site</a>\n        </div>\n    </div>\n</footer>\n"
 
 /***/ },
 
-/***/ 742:
+/***/ 759:
 /***/ function(module, exports) {
 
 module.exports = "<div class=\"row\">\n  <h3 class=\"flow-text center-align\">Các project đã tham gia</h3>\n  <div class=\"row\">\n    <div class=\"col s12\">\n      <ul materialize=\"tabs\" class=\"tabs\">\n        <li class=\"tab col s4\"><a class=\"active\" href=\"#bkinternship\">Bk Internship</a></li>\n        <li class=\"tab col s4\"><a href=\"#itbee\">Itbee social</a></li>\n        <li class=\"tab col s4\"><a href=\"#iot\">IoT BK Platform</a></li>\n      </ul>\n    </div>\n    <div id=\"bkinternship\" class=\"col s12\">\n      <div class=\"container\">\n        <h4>Quản lý thực tập hè</h4>\n        <p>Thời gian: 7/2015 - 9/2015</p>\n        <p>Hướng dẫn: TS. Trần Việt Trung</p>\n        <p>Cộng tác: Bùi Tuấn Ánh</p>\n        <p>Giới thiệu: gợi ý ghép cặp sinh viên và công ty theo từ khóa kỹ năng</p>\n        <p>Xuất bản: <a href>ttdn.giasan.vn</a></p>\n      </div>\n      <img src=\"assets/images/img_bkinternship.jpeg\" class=\"responsive-img center-block\" />\n    </div>\n    <div id=\"itbee\" class=\"col s12\">\n      <div class=\"container\">\n        <h4>Mạng xã hội việc làm</h4>\n        <p>Thời gian: 12/2015 - 7/2016</p>\n        <p>Hướng dẫn: TS. Trần Việt Trung</p>\n        <p>Cộng tác: Bùi Tuấn Ánh, Trần Hữu Đạt, Đỗ Văn Diện</p>\n        <p>Giới thiệu: đưa ra recommend cho các bee với những jobs phù hợp nhất</p>\n        <p>Xuất bản: <a href=\"http://itbee.vn\">itbee.vn</a></p>\n      </div>\n      <img src=\"assets/images/itbee.png\" class=\"responsive-img center-block\" />\n    </div>\n    <div id=\"iot\" class=\"col s12\">\n      <div class=\"container\">\n        <h4>Thử nghiệm hệ thống OM2M</h4>\n        <p>Thời gian: 4/2016 - 6/2016</p>\n        <p>Hướng dẫn: TS. Ngô Quỳnh Thu, TS. Trần Hải Anh</p>\n        <p>Cộng tác: Nhóm sinh viên K56</p>\n        <p>Giới thiệu: thử nghiệm hệ thống om2m với các ứng dụng smart phone và các sensor thu thập dữ liệu</p>\n        <p>Xuất bản: <a href=\"http://anhtranhai.ddns.net:8080/tuyenng\">anhtranhai.ddns.net:8080/tuyenng</a></p>\n      </div>\n      <img src=\"assets/images/bkiot.png\" class=\"responsive-img center-block\" />\n    </div>\n  </div>\n</div>\n"
 
 /***/ },
 
-/***/ 743:
+/***/ 760:
 /***/ function(module, exports) {
 
 module.exports = "    <div class=\"row\">\n        <div class=\"flow-text m-l\">\n            <h1 class=\"pink-text text-darken-4\" translate=\"SKILL\">SKILL</h1>\n        </div>\n    </div>\n<div style=\"background: url('/assets/images/swirl_pattern.png')\">\n    <div class=\"container\">\n        <masonry [options]=\"{ transitionDuration: '0.8s', gutter: 15, percentPosition: true }\">\n            <masonry-brick class=\"brick\" *ngFor=\"let image of images\" style=\"margin-bottom: 10px; margin-top: 10px;\">\n                <!-- {{brick.title}} -->\n                <img [src]=\"image\" class=\"responsive-img hoverable\" />\n                <!-- <a class=\"flow-text teal-text text-accent-4 m\">image.name</a> -->\n            </masonry-brick>\n        </masonry>\n    </div>\n</div>\n"
 
 /***/ },
 
-/***/ 792:
+/***/ 837:
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(414);
+module.exports = __webpack_require__(429);
 
 
 /***/ }
 
-},[792]);
+},[837]);
 //# sourceMappingURL=main.bundle.map
